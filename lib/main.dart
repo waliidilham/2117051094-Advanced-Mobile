@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:justdoit/screens/login_screen.dart';
 import 'package:justdoit/screens/onboarding_screen.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Onboardingscreen(),
+      home: const Loginscreen(),
     );
   }
 }
