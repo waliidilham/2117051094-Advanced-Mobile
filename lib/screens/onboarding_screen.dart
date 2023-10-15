@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:justdoit/screens/login_screen.dart';
+import 'package:justdoit/screens/signup_screen.dart';
 
 class Onboardingscreen extends StatelessWidget {
   const Onboardingscreen({Key? key}) : super(key: key);
@@ -11,8 +13,8 @@ class Onboardingscreen extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(top: 110.0),
-              child: Image.asset("assets/images/img.png"),
+              padding: const EdgeInsets.only(top: 103.0),
+              child: Image.asset("assets/images/shop.png"),
             ),
           ),
           SafeArea(
@@ -48,18 +50,25 @@ class Onboardingscreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Container(
                     height: 52,
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: ElevatedButton(
                       style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            const Color(0xFF1E90FF)),
                         foregroundColor:
                             MaterialStateProperty.all<Color>(Colors.white),
                       ),
-                      onPressed: () {},
-                      child: Text(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Signupscreen()));
+                      },
+                      child: const Text(
                         "Get Started",
                         style: TextStyle(
                           fontSize: 16,
@@ -67,16 +76,26 @@ class Onboardingscreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 8, bottom: 15),
-                    child: Text(
-                      "I already have an account",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Poppins-Reguler',
-                        color: Color(0XFFA4A8AE),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: TextButton(
+                      style: ButtonStyle(
+                        foregroundColor: MaterialStateProperty.all<Color>(
+                            const Color(0XFFA4A8AE)),
                       ),
-                      textAlign: TextAlign.center,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Loginscreen()));
+                      },
+                      child: const Text(
+                        "I already have an account",
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
                   ),
                 ],
