@@ -31,7 +31,6 @@ class Onboardingscreen extends StatelessWidget {
                       "Let’s start the journey",
                       style: TextStyle(
                         fontSize: 20,
-                        fontFamily: 'Poppins-Reguler',
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
@@ -44,7 +43,6 @@ class Onboardingscreen extends StatelessWidget {
                       "Experience seamless digital transactions with JustDuit",
                       style: TextStyle(
                         fontSize: 16,
-                        fontFamily: 'Poppins-Reguler',
                         color: Color(0XFFA4A8AE),
                       ),
                       textAlign: TextAlign.center,
@@ -59,14 +57,11 @@ class Onboardingscreen extends StatelessWidget {
                       style: ButtonStyle(
                         foregroundColor:
                             MaterialStateProperty.all<Color>(Colors.white),
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Color(0xFF1E90FF)),
                       ),
                       onPressed: () {},
                       child: Text(
                         "Get Started",
                         style: TextStyle(
-                          fontFamily: 'Poppins-Reguler',
                           fontSize: 16,
                         ),
                       ),
